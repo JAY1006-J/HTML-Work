@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <p> A Script on this page starts this clock:</p>
+        <p id="demo"> </p>
+        <button onclick="startTime()"> start the time </button>
+        <button onclick="stopTime()"> Stop the clock </button>
+        <script lang="javascript">
+            var myvar;
+            function startTime()
+            {
+                myvar =setInterval(myTimer,1000);
+            }
+            function myTimer()
+            {
+                var d =new Date();
+                var t =d.toLocaleTimeString();
+                document.getElementById("demo").innerHTML=t;
+            }
+            function stopTime()
+            {
+                clearInterval(myvar);
+
+            }
+        </script>
+    </body>
+</html>
